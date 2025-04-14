@@ -47,9 +47,9 @@ def get_suitable_crops(n, p, k, ca, mg, s, zn, b, ph, oc):
     return suitable_crops
 
 # Predict Button
-if st.button("Predict Suitable Crops 🌾"):
+if st.button("Predict Suitable Crops "):
     recommended_crops = get_suitable_crops(nitrogen, phosphorus, potassium, calcium, magnesium, sulfur, zinc, boron, ph, organic_carbon)
     if recommended_crops:
-        st.success(f"✅ Suitable Crops for Cultivation After Rice: **{', '.join(recommended_crops)}**")
+        st.success(f" Suitable Crops for Cultivation After Rice: {', '.join(recommended_crops)}")
     else:
-        st.warning("⚠️ No suitable crop found for the given soil conditions. Adjust the nutrient levels.")
+        st.warning(" No suitable crop found for the given soil conditions. Adjust the nutrient levels.")
